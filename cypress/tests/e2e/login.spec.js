@@ -1,4 +1,4 @@
-describe('Succesfully login', () => {
+describe('Login successful', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/signin')
     });
