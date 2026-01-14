@@ -74,6 +74,83 @@
       "balance": 49474,
       "createdAt": "2023-12-07T04:39:38.383Z",
       "modifiedAt": "2024-03-07T00:07:36.510Z"
+    },
+    {
+      "id": "NPcHDI57t",
+      "uuid": "dd82ec2d-b20a-4e85-9df6-558640136450",
+      "firstName": "Caroline",
+      "lastName": "Ferraz",
+      "username": "Carol",
+      "password": "$2a$10$BfpZrXlr8qdqg3dHWlrytepaIlGWEuGAY39Y9EuhPc3zhPK5ljBYe",
+      "balance": 0,
+      "createdAt": "2026-01-14T00:15:51.321Z",
+      "modifiedAt": "2026-01-14T00:15:51.321Z"
+    },
+    {
+      "id": "y3JnmLCEP",
+      "uuid": "9ffde48f-f4a4-49de-97d3-9d0fcbea64f8",
+      "firstName": "Caroline",
+      "lastName": "Ferraz",
+      "username": "Carol",
+      "password": "$2a$10$G7UTIHe7sAuG2UeanSwmQu/XMbWdu5NFSYcgIRWT8DnnyMLFImvKO",
+      "balance": 0,
+      "createdAt": "2026-01-14T00:16:16.868Z",
+      "modifiedAt": "2026-01-14T00:16:16.869Z"
+    },
+    {
+      "id": "aLeHNByHW",
+      "uuid": "d18abdc9-52dd-4b79-8276-82ce49e28af6",
+      "firstName": "Caroline",
+      "lastName": "Ferraz",
+      "username": "Carol",
+      "password": "$2a$10$JuyVi07/ZFCBavMTMYFjfOFt0VJpr0GwLXJnIxgrHsxrIsIh0fWme",
+      "balance": 0,
+      "createdAt": "2026-01-14T00:17:19.742Z",
+      "modifiedAt": "2026-01-14T00:17:19.742Z"
+    },
+    {
+      "id": "ZaojfDAd4",
+      "uuid": "1a468e0e-89a2-4fac-a5fe-80260f48ce86",
+      "firstName": "Caroline",
+      "lastName": "Ferraz",
+      "username": "Carol",
+      "password": "$2a$10$xRr4DKSySWvPXlkCtuynHuhO8B4k1XK9PP4iymxXhkTINbhi/xyiq",
+      "balance": 0,
+      "createdAt": "2026-01-14T00:18:54.118Z",
+      "modifiedAt": "2026-01-14T00:18:54.118Z"
+    },
+    {
+      "id": "cR-AX7xzS",
+      "uuid": "259b1d0a-98cc-49b9-aada-55d87a3218e0",
+      "firstName": "Caroline",
+      "lastName": "Ferraz",
+      "username": "Carol",
+      "password": "$2a$10$/CcytJwDw.sOI388WGs3UOyxcvyEOSQk2g3mm0COE1ByBuxlmGffK",
+      "balance": 0,
+      "createdAt": "2026-01-14T00:37:43.190Z",
+      "modifiedAt": "2026-01-14T00:37:43.190Z"
+    },
+    {
+      "id": "d-210KU5F",
+      "uuid": "aef1f3a8-4b57-47de-ac57-9a3c2fc3da61",
+      "firstName": "Caroline",
+      "lastName": "Ferraz",
+      "username": "Carol",
+      "password": "$2a$10$dxjq06Ze7ono9bnUVz8lDeKtVazV77QFOkLLqYznTPU8lS68d/9dS",
+      "balance": 0,
+      "createdAt": "2026-01-14T01:06:58.927Z",
+      "modifiedAt": "2026-01-14T01:06:58.927Z"
+    },
+    {
+      "id": "XRWmEh0Gm",
+      "uuid": "f9e23dbc-ddb9-46ef-b83f-9dd059c46cc1",
+      "firstName": "Caroline",
+      "lastName": "Ferraz",
+      "username": "Carol",
+      "password": "$2a$10$ZgFYiM74ZRHGxD6BxloS..a0sTi8a2Xq9jz6nAFUMWstwH6Nqdj3K",
+      "balance": 0,
+      "createdAt": "2026-01-14T01:08:52.876Z",
+      "modifiedAt": "2026-01-14T01:08:52.876Z"
     }
   ],
   "contacts": [
