@@ -1,75 +1,92 @@
+
+const selectorsList = {
+    signUpButton: '[href="/signup"]',
+    firstNameField: '#firstName',
+    lastNameField: '#lastName',
+    usernameField: '#username',
+    passwordField: '#password',
+    confirmPasswordField: '#confirmPassword',
+    signUpSubmitButton:'[data-test="signup-submit"]',
+    withoutFirstNameText: '#firstName-helper-text', 
+    withoutLastNameText: '#lastName-helper-text',
+    withoutUsernameText: '#username-helper-text',
+    withoutPasswordText: '#password-helper-text',
+    confirmPasswordText: '#confirmPassword-helper-text',
+    bodyGrid: '.App-root',
+}
+
 describe('Register an account', () => { 
     beforeEach(() => {
         cy.visit('http://localhost:3000/signin')
     });
 
     it('Registrar novo usuário com sucesso', () => {
-        cy.get('[href="/signup"]').click()
-        cy.get('#firstName').type('Caroline')
-        cy.get('#lastName').type('Ferraz')
-        cy.get('#username').type('Carol')
-        cy.get('#password').type('s3cret')
-        cy.get('#confirmPassword').type('s3cret')
-        cy.get('[data-test="signup-submit"]').click()
+        cy.get(selectorsList.signUpButton).click()
+        cy.get(selectorsList.firstNameField).type('Caroline')
+        cy.get(selectorsList.lastNameField).type('Ferraz')
+        cy.get(selectorsList.usernameField).type('Carol')
+        cy.get(selectorsList.passwordField).type('s3cret')
+        cy.get(selectorsList.confirmPasswordField).type('s3cret')
+        cy.get(selectorsList.signUpSubmitButton).click()
         cy.url().should('include', 'http://localhost:3000/signin')
     })
 
     it('Registrar novo usuário sem First Name', () => {
-        cy.get('[href="/signup"]').click()
-        cy.get('#firstName').click()
-        cy.get('#lastName').type('Ferraz')
-        cy.get('#username').type('Carol')
-        cy.get('#password').type('s3cret')
-        cy.get('#confirmPassword').type('s3cret')
-        cy.get('#firstName-helper-text').should('be.visible')
-        cy.get('#firstName-helper-text').contains('First Name is required')
+        cy.get(selectorsList.signUpButton).click()
+        cy.get(selectorsList.firstNameField).click()
+        cy.get(selectorsList.lastNameField).type('Ferraz')
+        cy.get(selectorsList.usernameField).type('Carol')
+        cy.get(selectorsList.passwordField).type('s3cret')
+        cy.get(selectorsList.confirmPasswordField).type('s3cret')
+        cy.get(selectorsList.withoutFirstNameText).should('be.visible')
+        cy.get(selectorsList.withoutFirstNameText).contains('First Name is required')
     })
 
     it('Registrar novo usuário sem Last Name', () => {
-        cy.get('[href="/signup"]').click()
-        cy.get('#firstName').type('Caroline')
-        cy.get('#lastName').click()
-        cy.get('#username').type('Carol')
-        cy.get('#password').type('s3cret')
-        cy.get('#confirmPassword').type('s3cret')
-        cy.get('#lastName-helper-text').should('be.visible')
-        cy.get('#lastName-helper-text').contains('Last Name is required')
+        cy.get(selectorsList.signUpButton).click()
+        cy.get(selectorsList.firstNameField).type('Caroline')
+        cy.get(selectorsList.lastNameField).click()
+        cy.get(selectorsList.usernameField).type('Carol')
+        cy.get(selectorsList.passwordField).type('s3cret')
+        cy.get(selectorsList.confirmPasswordField).type('s3cret')
+        cy.get(selectorsList.withoutLastNameText).should('be.visible')
+        cy.get(selectorsList.withoutLastNameText).contains('Last Name is required')
     })
 
     it('Registrar novo usuário sem Username', () => {
-        cy.get('[href="/signup"]').click()
-        cy.get('#firstName').type('Caroline')
-        cy.get('#lastName').type('Ferraz')
-        cy.get('#username').click()
-        cy.get('#password').type('s3cret')
-        cy.get('#confirmPassword').type('s3cret')
-        cy.get('#username-helper-text').should('be.visible')
-        cy.get('#username-helper-text').contains('Username is required')
+        cy.get(selectorsList.signUpButton).click()
+        cy.get(selectorsList.firstNameField).type('Caroline')
+        cy.get(selectorsList.lastNameField).type('Ferraz')
+        cy.get(selectorsList.usernameField).click()
+        cy.get(selectorsList.passwordField).type('s3cret')
+        cy.get(selectorsList.confirmPasswordField).type('s3cret')
+        cy.get(selectorsList.withoutUsernameText).should('be.visible')
+        cy.get(selectorsList.withoutUsernameText).contains('Username is required')
     })
 
     it('Registrar novo usuário sem Password', () => {
-        cy.get('[href="/signup"]').click()
-        cy.get('#firstName').type('Caroline')
-        cy.get('#lastName').type('Ferraz')
-        cy.get('#username').type('Carol')
-        cy.get('#password').click()
-        cy.get('#confirmPassword').type('s3cret')
-        cy.get('#password-helper-text').should('be.visible')
-        cy.get('#password-helper-text').contains('Enter your password')
-        cy.get('#confirmPassword-helper-text').should('be.visible')
-        cy.get('#confirmPassword-helper-text').contains('Password does not match')
+        cy.get(selectorsList.signUpButton).click()
+        cy.get(selectorsList.firstNameField).type('Caroline')
+        cy.get(selectorsList.lastNameField).type('Ferraz')
+        cy.get(selectorsList.usernameField).type('Carol')
+        cy.get(selectorsList.passwordField).click()
+        cy.get(selectorsList.confirmPasswordField).type('s3cret')
+        cy.get(selectorsList.withoutPasswordText).should('be.visible')
+        cy.get(selectorsList.withoutPasswordText).contains('Enter your password')
+        cy.get(selectorsList.confirmPasswordText).should('be.visible')
+        cy.get(selectorsList.confirmPasswordText).contains('Password does not match')
     })
 
     it('Registrar novo usuário sem confirmação do Password', () => {
-        cy.get('[href="/signup"]').click()
-        cy.get('#firstName').type('Caroline')
-        cy.get('#lastName').type('Ferraz')
-        cy.get('#username').type('Carol')
-        cy.get('#password').type('s3cret')
-        cy.get('#confirmPassword').click()
-        cy.get('.App-root').click()
-        cy.get('#confirmPassword-helper-text').should('be.visible')
-        cy.get('#confirmPassword-helper-text').contains('Confirm your password')
+        cy.get(selectorsList.signUpButton).click()
+        cy.get(selectorsList.firstNameField).type('Caroline')
+        cy.get(selectorsList.lastNameField).type('Ferraz')
+        cy.get(selectorsList.usernameField).type('Carol')
+        cy.get(selectorsList.passwordField).type('s3cret')
+        cy.get(selectorsList.confirmPasswordField).click()
+        cy.get(selectorsList.bodyGrid).click()
+        cy.get(selectorsList.confirmPasswordText).should('be.visible')
+        cy.get(selectorsList.confirmPasswordText).contains('Confirm your password')
     })
 });
 
